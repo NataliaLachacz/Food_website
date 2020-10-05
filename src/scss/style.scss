@@ -1,15 +1,4 @@
-//reset default css
-* {
-margin: 0;
-padding: 0;
-border: 0;
-line-height: 1.4em;
-vertical-align: baseline;
-text-decoration: none;
-outline: 0;
-list-style-type: none;
-}
-
+@import 'src/scss/reset.scss';
 @import 'src/scss/variables.scss';
 
 body {
@@ -54,6 +43,10 @@ body {
     
         img {
             width: 190px;
+        }
+
+        .hamburger {
+            display: none;
         }
     
         .menu {
@@ -340,11 +333,11 @@ main {
             background-color: $orange;
             width: 30%;
             overflow: hidden;
-            border-radius: 30px;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            -ms-border-radius: 30px;
-            -o-border-radius: 30px;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
 
             &::before {
                 content: '';
@@ -459,3 +452,5 @@ main {
         padding-top: 15px;
     }
 }
+
+@import 'src/scss/rwd.scss';

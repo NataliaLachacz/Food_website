@@ -1,0 +1,133 @@
+@import 'src/scss/variables.scss';
+
+//RWD
+@media only screen and (min-width: 1665px) {
+    .header__photo--background {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        .navbar {
+            .hamburger {
+                display: inline;
+            }
+            .menu {
+                display: none;
+                .menu__item a{
+                    color: $dark;
+                }
+            }
+            .showNav {
+                display: grid;
+                align-content: center;
+                position: fixed;
+                text-align: center;
+                top: 0;
+                right: 0;
+                padding-top: 100px;
+                background: rgba(219, 219, 219, 0.8);
+                font-size: 25px;
+                z-index: 1;
+            }
+        }
+    }
+    .header__photo--background {
+        display: none;
+    }
+
+    .header__contener {
+        margin: 0 10%;
+        word-break: break;
+        text-align: center;
+
+       .slogan { 
+            &__text {
+                width: 100%;
+            }
+       }
+       .social {
+           text-align: left;
+       }
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .footer {
+        background-size: cover;
+
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header__contener .social {
+        margin-top: 0;
+    }
+
+    .header .scroll {
+        margin: 0 auto;
+    }
+    main {
+        margin-top: 50px;
+        .ourFood {
+            display: grid;
+
+            &__content {
+                display: grid;
+                justify-items: center;
+            }
+
+            > img {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            .btn--orange {
+                margin-top: 40px;
+            }
+        }
+        .plans {
+            padding: 4rem 0;
+
+            &__photos {
+                display: grid;
+                justify-items: center;
+
+                img {
+                    width: 80%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .contact {
+            margin-bottom: 0px;
+
+            &__form {
+                margin: auto;
+                width: 70%;
+            }
+
+            .map {
+                position: sticky;
+            }
+        }
+    }
+    .footer {
+        padding: 50px 0px 20px 0px;
+        &__container {
+            grid-template-columns: 1fr;
+
+            div {
+                padding: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
